@@ -4,7 +4,7 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
-	"your-project/internal/service"
+	"recu/internal/service"
 )
 
 type ProductHandler struct {

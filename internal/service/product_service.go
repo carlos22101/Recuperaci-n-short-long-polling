@@ -2,8 +2,8 @@
 package service
 
 import (
-	"your-project/internal/domain"
-	"your-project/internal/repository"
+	"recu/internal/domain"
+	"recu/internal/repository"
 )
 
 type ProductService struct {

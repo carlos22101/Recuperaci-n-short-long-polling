@@ -3,7 +3,7 @@ package repository
 
 import (
 	"sync"
-	"your-project/internal/domain"
+	"recu/internal/domain"
 )
 
 type ProductRepository struct {

@@ -1,9 +1,7 @@
-// pkg/polling/polling.go
 package polling
 
 import (
 	"sync"
-	"time"
 )
 
 type Poller struct {
@@ -17,7 +15,7 @@ func NewPoller() *Poller {
 	}
 }
 
-func (p *Poller) Subscribe() <-chan interface{} {
+func (p *Poller) Subscribe() chan interface{} {
 	p.mu.Lock()
 	defer p.mu.Unlock()
 	
@@ -26,7 +24,7 @@ func (p *Poller) Subscribe() <-chan interface{} {
 	return ch
 }
 
-func (p *Poller) Unsubscribe(ch <-chan interface{}) {
+func (p *Poller) Unsubscribe(ch chan interface{}) {
 	p.mu.Lock()
 	defer p.mu.Unlock()
 	
