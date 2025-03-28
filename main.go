@@ -13,18 +13,15 @@ import (
 )
 
 func main() {
-	// Configurar logging
 	log.SetOutput(os.Stdout)
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 
-	// Crear componentes
 	repo := repository.NewProductRepository()
 	service := service.NewProductService(repo)
 	handler := handlers.NewProductHandler(service)
 	productsPoller := polling.NewPoller()
 
 	http.HandleFunc("/products", func(w http.ResponseWriter, r *http.Request) {
-		// Configurar CORS para pruebas locales
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")

@@ -1,4 +1,3 @@
-// internal/handlers/product_handler.go
 package handlers
 
 import (

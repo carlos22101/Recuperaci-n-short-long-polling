@@ -39,7 +39,7 @@ func (p *Poller) Publish(data interface{}) {
 		select {
 		case ch <- data:
 		default:
-			// Canal lleno, saltamos
+
 		}
 	}
 }

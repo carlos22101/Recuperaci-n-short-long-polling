@@ -1,9 +1,7 @@
-
 package domain
 
 import (
 	"time"
-
 	"github.com/google/uuid"
 )
 
